@@ -13,7 +13,7 @@
               </div>
           </div>
           <!-- row end -->
-          <div class="blog-slide owl-carousel owl-theme owl-loaded " data-item="3" data-nav="false" data-dots="false" data-auto="false">
+          <div class="row">
 
             <% if Package.exists? %>
             <% @packages.each do |p| %>
@@ -23,7 +23,7 @@
                     <img class="img-fluid" src="<%= p.pkimg_url.to_s %>" alt="">
                     <div class="ttm-blog-overlay-iconbox">
                       <%= link_to new_loan_path do %>
-      <i class="ti ti-plus"></i><% end %>
+                    <i class="ti ti-plus"></i><% end %>
                     </div>
                     <div class="ttm-box-view-overlay"></div>
                 </div>

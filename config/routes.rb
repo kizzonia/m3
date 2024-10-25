@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ccservices
   resources :adminloans
   resources :loans
   resources :packages

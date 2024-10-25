@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_07_21_110420) do
+ActiveRecord::Schema.define(version: 2024_10_25_151233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -168,6 +168,17 @@ ActiveRecord::Schema.define(version: 2024_07_21_110420) do
     t.string "phone"
     t.index ["slug"], name: "index_cards_on_slug"
     t.index ["user_id"], name: "index_cards_on_user_id"
+  end
+
+  create_table "ccservices", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "body"
+    t.string "slug"
+    t.string "ccimg1"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_ccservices_on_slug"
   end
 
   create_table "contacts", force: :cascade do |t|

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ccservice.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @ccservice.subtitle %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @ccservice.body %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @ccservice.slug %>
+</p>
+
+<p>
+  <strong>Ccimg1:</strong>
+  <%= @ccservice.ccimg1 %>
+</p>
+
+<%= link_to 'Edit', edit_ccservice_path(@ccservice) %> |
+<%= link_to 'Back', ccservices_path %>

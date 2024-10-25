@@ -1,0 +1,2 @@
+class Ccservice < ApplicationRecord
+end

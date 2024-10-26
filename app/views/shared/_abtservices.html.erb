@@ -1,3 +1,49 @@
+
+<% if Section.exists? %>
+
+<section class="ttm-row service-section-style2 ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <div class="row"><!-- row -->
+                        <div class="col-lg-12">
+                            <!-- section title -->
+                            <div class="section-title with-desc text-center clearfix">
+                                <div class="title-header">
+                                    <h5>We Make Connections</h5>
+                                    <h2 class="title">We provide best <span>Services</span></h2>
+                                </div>
+                            </div><!-- section title end -->
+                        </div>
+                    </div>
+                    <div class="row no-gutters"><!-- row -->
+                      <%= @section.each do |a| %>
+                        <div class="col-md-6 col-lg-3">
+                            <!--  featured-icon-box -->
+                            <div class="featured-icon-box style6">
+                                <div class="featured-content"><!--  featured-content -->
+                                    <div class="featured-title"><!--  featured-title -->
+                                        <h5 class="mb-10"><%= a.title %></h5>
+                                    </div>
+                                    <div class="featured-desc"><!--  featured-desc -->
+                                        <p class="mb-25"><%= a.sub_title %></p>
+                                    </div>
+                                </div>
+                                <div class="featured-icon"><!--  featured-icon -->
+                                    <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
+                                        <i class="<%= a.icon %>"></i><!--  ttm-icon -->
+                                    </div>
+                                </div>
+                                <%= link_to a, class: "ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline style2 mt-15" do %>
+                                Read More <% end %>
+                            </div><!--  featured-icon-box END -->
+                        </div>
+                    <% end %>
+
+                    </div>
+                    <!-- row end -->
+                </div>
+            </section>
+<% else %>
+
 <section class="ttm-row service-section-style2 ttm-bgcolor-grey clearfix">
                 <div class="container">
                     <div class="row"><!-- row -->
@@ -92,3 +138,4 @@
                     <!-- row end -->
                 </div>
             </section>
+<% end %>

@@ -46,7 +46,10 @@
 <% @services = Service.all.order('created_at DESC') %>
 <% @welcomes = Welcome.all %>
 <% @headers = Header.all %>
+<% @sections = Section.all %>
 <% @plans = Plan.all %>
+
+<% @ccservices = Ccservice.all %>
 <% @packages = Package.all.order('created_at ASC') %>
 
 
